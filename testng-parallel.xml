@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<methods-level parallelism-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+  TestNG suite config. Default is parallel methods with thread-count=4.
+  - To run sequentially: set parallel="false" or remove the parallel attribute.
+  - To run parallel at class level instead: parallel="classes".
+-->
+<suite name="InternetHerokuTests" parallel="methods" thread-count="4">
+
+    <test name="UI Tests">
+
+        <classes>
+
+        <class name="alerts.AlertTests"/>
+    </classes> </test>
+
+</suite>
