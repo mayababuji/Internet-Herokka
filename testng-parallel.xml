@@ -14,6 +14,7 @@
         <classes>
 
         <class name="alerts.AlertTests"/>
+            <class name="addRemoveElements.AddRemoveElemTest"/>
     </classes> </test>
 
 </suite>

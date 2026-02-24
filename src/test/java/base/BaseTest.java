@@ -1,5 +1,7 @@
 package base;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -8,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import io.qameta.allure.Attachment;
+
 
 public class BaseTest {
     // ThreadLocal to ensure each test thread gets its own WebDriver instance
@@ -19,11 +23,16 @@ public class BaseTest {
         // Selenium 4.6+ automatically finds ChromeDriver from system PATH
         WebDriver  webDriver;
         switch (browser.toLowerCase())
-        { case "firefox":
-            webDriver = new FirefoxDriver();
-            break;
-            case "edge": webDriver = new EdgeDriver(); break;
-            case "chrome": default: webDriver = new ChromeDriver(); break; }
+        {
+            case "firefox":
+                webDriver = new FirefoxDriver();
+                break;
+            case "edge":
+                webDriver = new EdgeDriver();
+                break;
+            case "chrome": default:
+                webDriver = new ChromeDriver();
+                break; }
         webDriver.manage().window().maximize();
         driver.set(webDriver);
     }
@@ -37,5 +46,10 @@ public class BaseTest {
             driver.remove();
         }
     }
+
+    @Attachment(value = "Screenshot", type = "image/png")
+    public byte[] saveScreenshot()
+    { return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES); }
+
 
 }
