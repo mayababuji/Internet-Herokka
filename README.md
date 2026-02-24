@@ -98,8 +98,19 @@ If you run without XML, IntelliJ defaults to Chrome via `@Optional("chrome")`.
 
 ---
 ## Parallel Test Execution (TestNG + Threading)
- This screenshot shows the parallel execution of 5 tests using `parallel="methods"` and `thread-count="5"`.
+
+-This screenshot shows the parallel execution of 5 tests using `parallel="methods"` and `thread-count="5"`.
+
 ![Parallel Execution](readme-assets/parallel-run.png)
+
+----
+
+----
+## Cross-Browser Execution (Chrome + Firefox + Edge) 
+
+-This screenshot demonstrates the cross-browser suite running the same tests across multiple browsers.
+
+![Cross Browser Execution](readme-assets/cross-browser-run.png) ---
 ----
 ## 📌 Future Enhancements
 
