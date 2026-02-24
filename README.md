@@ -97,7 +97,10 @@ You can still run tests normally:
 If you run without XML, IntelliJ defaults to Chrome via `@Optional("chrome")`.
 
 ---
-
+## Parallel Test Execution (TestNG + Threading)
+ This screenshot shows the parallel execution of 5 tests using `parallel="methods"` and `thread-count="5"`.
+![Parallel Execution](readme-assets/parallel-run.png)
+----
 ## 📌 Future Enhancements
 
 - Add more HerokuApp modules (Dropdowns, Frames, Dynamic Loading, etc.)  
