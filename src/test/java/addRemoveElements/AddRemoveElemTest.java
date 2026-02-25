@@ -12,14 +12,14 @@ import pages.HomePage;
 
 import static org.testng.Assert.assertEquals;
 
-
+@Epic("HerokuApp")
 public class AddRemoveElemTest extends BaseTest {
     @BeforeMethod
     public void goToAddRemoveElemPage(){
         getDriver().get("https://the-internet.herokuapp.com");
         System.out.println("Running thread: " + Thread.currentThread().getName());
     }
-    @Epic("HerokuApp")
+
     @Feature("Add/Remove Elements")
     @Story("User clicks add remove elements button")
     @Test(description = "Verify  add remove elements button functionality")
@@ -33,7 +33,7 @@ public class AddRemoveElemTest extends BaseTest {
     assertEquals(size,2,"Delete button count is incorrect expected was "+'2'+" actual was "+size);
   }
 
-    @Epic("HerokuApp")
+
     @Feature("Add/Remove Elements")
     @Story("User clicks delete elements button")
     @Test(description = "Verify delete button functionality")

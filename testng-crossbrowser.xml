@@ -24,6 +24,8 @@
         <classes>
             <class name="alerts.AlertTests"/>
             <class name="addRemoveElements.AddRemoveElemTest"/>
+            <class name="basicAuth.BasicAuthTest"/>
+            <class name="brokenImages.BrokenImagesTest"/>
         </classes>
     </test>
 

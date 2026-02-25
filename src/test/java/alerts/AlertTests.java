@@ -10,7 +10,7 @@ import pages.AlertsPage;
 import pages.HomePage;
 
 import static org.testng.Assert.assertEquals;
-
+@Epic("HerokuApp")
 public class AlertTests extends BaseTest {
 
     @BeforeMethod
@@ -19,7 +19,7 @@ public class AlertTests extends BaseTest {
 
         System.out.println("Running thread: " + Thread.currentThread().getName());
     }
-    @Epic("HerokuApp")
+
     @Feature("JavaScript Alert")
     @Story("User JavaScript Alert button")
     @Test(description = "Verify JavaScript Alert functionality")
@@ -30,7 +30,7 @@ public class AlertTests extends BaseTest {
         assertEquals(alertPage.getResultMessage(), "You successfully clicked an alert", "Result message is incorrect");
     }
 
-    @Epic("HerokuApp")
+
     @Feature("JavaScript Confirm ")
     @Story("User JavaScript Confirm  button")
     @Test(description = "Verify JavaScript Confirm functionality")
@@ -41,7 +41,7 @@ public class AlertTests extends BaseTest {
         assertEquals(alertPage.getResultMessage(), "You clicked: Ok", "Result message is incorrect");
     }
 
-    @Epic("HerokuApp")
+
     @Feature("JavaScript Prompt ")
     @Story("User JavaScript Prompt  button")
     @Test(description = "Verify JavaScript Prompt functionality")

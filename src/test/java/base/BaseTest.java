@@ -37,7 +37,9 @@ public class BaseTest {
         driver.set(webDriver);
     }
 
-    protected WebDriver getDriver() { return driver.get(); }
+    protected WebDriver getDriver() {
+        return driver.get();
+    }
 
     @AfterMethod
     public void tearDown(){
