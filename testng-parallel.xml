@@ -17,6 +17,7 @@
             <class name="addRemoveElements.AddRemoveElemTest"/>
             <class name="basicAuth.BasicAuthTest"/>
             <class name="brokenImages.BrokenImagesTest"/>
+            <class name="challengingDOM.ChallengingDOMTest"/>
     </classes> </test>
 
 </suite>

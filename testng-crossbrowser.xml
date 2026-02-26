@@ -8,6 +8,9 @@
         <classes>
             <class name="alerts.AlertTests"/>
             <class name="addRemoveElements.AddRemoveElemTest"/>
+            <class name="basicAuth.BasicAuthTest"/>
+            <class name="brokenImages.BrokenImagesTest"/>
+            <class name="challengingDOM.ChallengingDOMTest"/>
         </classes>
     </test>
 
@@ -16,6 +19,9 @@
         <classes>
             <class name="alerts.AlertTests"/>
             <class name="addRemoveElements.AddRemoveElemTest"/>
+            <class name="basicAuth.BasicAuthTest"/>
+            <class name="brokenImages.BrokenImagesTest"/>
+            <class name="challengingDOM.ChallengingDOMTest"/>
         </classes>
     </test>
 
@@ -26,6 +32,7 @@
             <class name="addRemoveElements.AddRemoveElemTest"/>
             <class name="basicAuth.BasicAuthTest"/>
             <class name="brokenImages.BrokenImagesTest"/>
+            <class name="challengingDOM.ChallengingDOMTest"/>
         </classes>
     </test>
 

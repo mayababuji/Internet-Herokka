@@ -12,6 +12,7 @@ public class HomePage {
     private static final String JSALERTS = "a[href*='alerts']";
     private static final String ADDREMOVELEM="a[href*='remove']";
     private static final String BROKEN_IMAGES_LINK = "a[href*='broken_images']";
+    private static final String CHALLENGING_DOM = "a[href*='challenging']";
 
     private WebDriverWait wait;
     public HomePage(WebDriver driver){
@@ -37,6 +38,12 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(BROKEN_IMAGES_LINK)));
         driver.findElement(By.cssSelector(BROKEN_IMAGES_LINK)).click();
         return new BrokenImagesPage(driver);
+    }
+
+    public ChallengingDOMPage   clickChallengingDOMLink(){
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(CHALLENGING_DOM)));
+        driver.findElement(By.cssSelector(CHALLENGING_DOM)).click();
+        return new ChallengingDOMPage(driver);
     }
 
 
