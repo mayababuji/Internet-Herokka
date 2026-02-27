@@ -13,6 +13,8 @@ public class HomePage {
     private static final String ADDREMOVELEM="a[href*='remove']";
     private static final String BROKEN_IMAGES_LINK = "a[href*='broken_images']";
     private static final String CHALLENGING_DOM = "a[href*='challenging']";
+    private static final String CHECK_BOX_LINK = "a[href*='checkboxes']";
+    private static final String CONTEXT_MENU_LINK = "a[href*='context']";
 
     private WebDriverWait wait;
     public HomePage(WebDriver driver){
@@ -44,6 +46,18 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(CHALLENGING_DOM)));
         driver.findElement(By.cssSelector(CHALLENGING_DOM)).click();
         return new ChallengingDOMPage(driver);
+    }
+
+    public CheckBoxPage clickCheckBoxLink(){
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(CHECK_BOX_LINK))).click();
+        return new CheckBoxPage(driver);
+
+    }
+
+    public ContextMenuPage clickContextMenuLink(){
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(CONTEXT_MENU_LINK))).click();
+        return new ContextMenuPage(driver);
+
     }
 
 

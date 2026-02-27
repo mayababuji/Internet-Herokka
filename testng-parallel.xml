@@ -18,6 +18,8 @@
             <class name="basicAuth.BasicAuthTest"/>
             <class name="brokenImages.BrokenImagesTest"/>
             <class name="challengingDOM.ChallengingDOMTest"/>
+            <class name="checkBoxes.CheckBoxTest"/>
+            <class name="contextMenu.ContextMenuTest"/>
     </classes> </test>
 
 </suite>
