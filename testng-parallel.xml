@@ -20,6 +20,8 @@
             <class name="challengingDOM.ChallengingDOMTest"/>
             <class name="checkBoxes.CheckBoxTest"/>
             <class name="contextMenu.ContextMenuTest"/>
+            <class name="digestAuthentication.DigestAuthenticationTest"/>
+            <class name="disappearingElements.DisappearingElementTest"/>
     </classes> </test>
 
 </suite>

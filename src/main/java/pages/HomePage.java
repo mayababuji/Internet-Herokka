@@ -15,6 +15,7 @@ public class HomePage {
     private static final String CHALLENGING_DOM = "a[href*='challenging']";
     private static final String CHECK_BOX_LINK = "a[href*='checkboxes']";
     private static final String CONTEXT_MENU_LINK = "a[href*='context']";
+    private static final String DISAPPEARING_ELEMENTS_LINK="a[href*='disappear']";
 
     private WebDriverWait wait;
     public HomePage(WebDriver driver){
@@ -59,6 +60,11 @@ public class HomePage {
         return new ContextMenuPage(driver);
 
     }
+public DisappearingElementPage clickDisappearingElementLink(){
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(DISAPPEARING_ELEMENTS_LINK))).click();
+        return new DisappearingElementPage(driver);
+
+}
 
 
 }

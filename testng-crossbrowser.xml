@@ -13,6 +13,8 @@
             <class name="challengingDOM.ChallengingDOMTest"/>
             <class name="checkBoxes.CheckBoxTest"/>
             <class name="contextMenu.ContextMenuTest"/>
+            <class name="digestAuthentication.DigestAuthenticationTest"/>
+            <class name="disappearingElements.DisappearingElementTest"/>
         </classes>
     </test>
 
@@ -25,6 +27,8 @@
             <class name="brokenImages.BrokenImagesTest"/>
             <class name="checkBoxes.CheckBoxTest"/>
             <class name="contextMenu.ContextMenuTest"/>
+            <class name="digestAuthentication.DigestAuthenticationTest"/>
+            <class name="disappearingElements.DisappearingElementTest"/>
         </classes>
     </test>
 
@@ -38,6 +42,8 @@
             <class name="challengingDOM.ChallengingDOMTest"/>
             <class name="checkBoxes.CheckBoxTest"/>
             <class name="contextMenu.ContextMenuTest"/>
+            <class name="digestAuthentication.DigestAuthenticationTest"/>
+            <class name="disappearingElements.DisappearingElementTest"/>
         </classes>
     </test>
 
