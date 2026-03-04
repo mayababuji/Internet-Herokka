@@ -13,11 +13,7 @@ import java.util.List;
 
 public class DisappearingElementTest extends BaseTest {
 
-    @BeforeMethod
-    public void goToDisappearingElementsPage(){
-        getDriver().get("https://the-internet.herokuapp.com/");
 
-    }
 @Epic("Disapperring Menu")
 @Feature("User clicks on disaapearing elements")
     @Test(description = "Test if Gallery element is disappeared")

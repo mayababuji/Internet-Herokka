@@ -10,11 +10,7 @@ import pages.ChallengingDOMPage;
 import pages.HomePage;
 
 public class ChallengingDOMTest extends BaseTest {
-    @BeforeMethod
-    public void goToChallengingDOMPages(){
-        getDriver().get("https://the-internet.herokuapp.com");
-        System.out.println("Running thread: " + Thread.currentThread().getName());
-    }
+
 
     @Feature("Challenging DOM")
     @Epic("User CLicks on Challenging DOM link")

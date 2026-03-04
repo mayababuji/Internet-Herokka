@@ -14,11 +14,6 @@ import static org.testng.Assert.assertEquals;
 
 @Epic("HerokuApp")
 public class AddRemoveElemTest extends BaseTest {
-    @BeforeMethod
-    public void goToAddRemoveElemPage(){
-        getDriver().get("https://the-internet.herokuapp.com");
-        System.out.println("Running thread: " + Thread.currentThread().getName());
-    }
 
     @Feature("Add/Remove Elements")
     @Story("User clicks add remove elements button")

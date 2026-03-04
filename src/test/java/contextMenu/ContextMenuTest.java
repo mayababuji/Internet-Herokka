@@ -10,12 +10,7 @@ import pages.ContextMenuPage;
 import pages.HomePage;
 
 public class ContextMenuTest extends BaseTest {
-    @BeforeMethod
-    public void goToContextMenuPages(){
-        getDriver().get("https://the-internet.herokuapp.com");
-        System.out.println("Running thread: " + Thread.currentThread().getName());
 
-    }
 
     @Epic("Context Menu")
     @Feature("User clicks on context menu")

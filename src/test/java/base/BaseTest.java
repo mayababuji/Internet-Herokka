@@ -35,6 +35,8 @@ public class BaseTest {
                 break; }
         webDriver.manage().window().maximize();
         driver.set(webDriver);
+        // Launch website
+        getDriver().get("https://the-internet.herokuapp.com/");
     }
 
     protected WebDriver getDriver() {

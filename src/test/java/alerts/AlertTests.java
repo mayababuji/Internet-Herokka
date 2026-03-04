@@ -13,12 +13,7 @@ import static org.testng.Assert.assertEquals;
 @Epic("HerokuApp")
 public class AlertTests extends BaseTest {
 
-    @BeforeMethod
-    public void goToAlertPage(){
-        getDriver().get("https://the-internet.herokuapp.com");
 
-        System.out.println("Running thread: " + Thread.currentThread().getName());
-    }
 
     @Feature("JavaScript Alert")
     @Story("User JavaScript Alert button")

@@ -16,13 +16,7 @@ import static org.testng.Assert.assertEquals;
 @Epic("HerokuApp")
 public class BrokenImagesTest  extends BaseTest
 {
-    @BeforeMethod
-    public void goToBrokenImagesPage()
-    {
-        getDriver().get("https://the-internet.herokuapp.com");
 
-        System.out.println("Running thread: " + Thread.currentThread().getName());
-    }
     @Feature("Broken Images")
     @Story("User clicks on broken Images")
     @Test(description = "Verify the number of broken images")

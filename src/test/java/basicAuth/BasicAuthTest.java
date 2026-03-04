@@ -11,12 +11,7 @@ import pages.BasicAuthPage;
 import static org.testng.Assert.assertEquals;
 @Epic("HerokuApp")
 public class BasicAuthTest extends BaseTest {
-    @BeforeMethod
-    public void goToBasicAuthPage() {
-        getDriver().get("https://the-internet.herokuapp.com");
-        System.out.println("Running thread: " + Thread.currentThread().getName());
 
-    }
 
     @Feature("Basic Auth")
     @Story("User logins with basic auth")
