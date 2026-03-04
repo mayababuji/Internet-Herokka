@@ -11,12 +11,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ContextMenuPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private static final String HOT_SPOT = "hot-spot";
+    private final WebDriver driver;
 
     //Locators
+    private final WebDriverWait wait;
 
-    private static final String HOT_SPOT = "hot-spot";
     public ContextMenuPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));

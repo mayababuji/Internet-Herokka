@@ -4,21 +4,20 @@ import base.BaseTest;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.AlertsPage;
 import pages.HomePage;
 
 import static org.testng.Assert.assertEquals;
+
 @Epic("HerokuApp")
 public class AlertTests extends BaseTest {
-
 
 
     @Feature("JavaScript Alert")
     @Story("User JavaScript Alert button")
     @Test(description = "Verify JavaScript Alert functionality")
-    public void testAlert(){
+    public void testAlert() {
         AlertsPage alertPage = new HomePage(getDriver()).clickAlertsLink();
         alertPage.triggerAlert();
         alertPage.acceptAlert();
@@ -29,7 +28,7 @@ public class AlertTests extends BaseTest {
     @Feature("JavaScript Confirm ")
     @Story("User JavaScript Confirm  button")
     @Test(description = "Verify JavaScript Confirm functionality")
-    public void testConfirmAlert(){
+    public void testConfirmAlert() {
         AlertsPage alertPage = new HomePage(getDriver()).clickAlertsLink();
         alertPage.triggerConfirmAlert();
         alertPage.acceptAlert();
@@ -40,12 +39,12 @@ public class AlertTests extends BaseTest {
     @Feature("JavaScript Prompt ")
     @Story("User JavaScript Prompt  button")
     @Test(description = "Verify JavaScript Prompt functionality")
-    public void testPromptAlert(){
+    public void testPromptAlert() {
         AlertsPage alertPage = new HomePage(getDriver()).clickAlertsLink();
         String prompt = "testPromptAlert";
         alertPage.triggerPromptAlert();
         alertPage.enterPrompt(prompt);
-        assertEquals(alertPage.getResultMessage(), "You entered: "+prompt, "Prompt message is incorrect");
+        assertEquals(alertPage.getResultMessage(), "You entered: " + prompt, "Prompt message is incorrect");
     }
 
 }

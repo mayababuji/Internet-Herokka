@@ -9,18 +9,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AlertsPage {
-    private final WebDriver driver;
-    private WebDriverWait wait;
     // Using CSS Selector for testing
     private static final String JSALERT_BUTTON = "button[onclick='jsAlert()']";
     private static final String RESULT_ID = "result";
     private static final String JSCONFIRM_BUTTON = "button[onclick='jsConfirm()']";
     private static final String JSPROMPT_BUTTON = "button[onclick='jsPrompt()']";
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
 
-    public AlertsPage(WebDriver driver){
+    public AlertsPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public void triggerAlert() {
@@ -44,9 +44,11 @@ public class AlertsPage {
     public void triggerConfirmAlert() {
         driver.findElement(By.cssSelector(JSCONFIRM_BUTTON)).click();
     }
+
     public void triggerPromptAlert() {
         driver.findElement(By.cssSelector(JSPROMPT_BUTTON)).click();
     }
+
     public void enterPrompt(String prompt) {
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();

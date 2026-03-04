@@ -3,18 +3,19 @@ package checkBoxes;
 import base.BaseTest;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CheckBoxPage;
 import pages.HomePage;
 
+@Epic("HerokuApp")
 public class CheckBoxTest extends BaseTest {
 
     @Feature("CheckBoxes ")
-    @Epic("User CLicks on CheckBoxes  link")
+    @Story("User CLicks on CheckBoxes  link")
     @Test(description = "Verify if first check box is clicked")
-    public void firstCheckBoxTest(){
+    public void firstCheckBoxTest() {
         CheckBoxPage checkBoxPage = new HomePage(getDriver()).clickCheckBoxLink();
         checkBoxPage.clickOnFirstCheckBox();
         boolean isSelected = checkBoxPage.validateClickOnFirstCheckBox();
@@ -23,13 +24,12 @@ public class CheckBoxTest extends BaseTest {
     }
 
     @Test(description = "Verify if second check box is unchecked")
-    public void secondCheckBoxTest(){
+    public void secondCheckBoxTest() {
         CheckBoxPage checkBoxPage = new HomePage(getDriver()).clickCheckBoxLink();
         checkBoxPage.clickOnSecondCheckBox();
         boolean isNotChecked = checkBoxPage.validateSecondCheckBox();
         Assert.assertTrue(isNotChecked);
     }
-
 
 
 }

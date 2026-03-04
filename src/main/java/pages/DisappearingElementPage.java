@@ -11,17 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DisappearingElementPage {
+    private static final String ALL_ELEMENTS = "ul li a";
     private final WebDriver driver;
     private final WebDriverWait wait;
-
-    private static String ALL_ELEMENTS = "ul li a";
 
     public DisappearingElementPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    public List<String> getMenuItems(){
+    public List<String> getMenuItems() {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(ALL_ELEMENTS)));
         List<WebElement> menuItems = driver.findElements(By.cssSelector(ALL_ELEMENTS));
         List<String> menuItemNames = new ArrayList<>();

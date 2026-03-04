@@ -1,5 +1,6 @@
 package base;
 
+import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import io.qameta.allure.Attachment;
 
 
 public class BaseTest {
@@ -19,20 +19,21 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters("browser")
-    public void setUp(@Optional("chrome")String browser) {
+    public void setUp(@Optional("chrome") String browser) {
         // Selenium 4.6+ automatically finds ChromeDriver from system PATH
-        WebDriver  webDriver;
-        switch (browser.toLowerCase())
-        {
+        WebDriver webDriver;
+        switch (browser.toLowerCase()) {
             case "firefox":
                 webDriver = new FirefoxDriver();
                 break;
             case "edge":
                 webDriver = new EdgeDriver();
                 break;
-            case "chrome": default:
+            case "chrome":
+            default:
                 webDriver = new ChromeDriver();
-                break; }
+                break;
+        }
         webDriver.manage().window().maximize();
         driver.set(webDriver);
         // Launch website
@@ -44,7 +45,7 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         if (getDriver() != null) {
             getDriver().quit();
             driver.remove();
@@ -52,8 +53,9 @@ public class BaseTest {
     }
 
     @Attachment(value = "Screenshot", type = "image/png")
-    public byte[] saveScreenshot()
-    { return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES); }
+    public byte[] saveScreenshot() {
+        return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+    }
 
 
 }
