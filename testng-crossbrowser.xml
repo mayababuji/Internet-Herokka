@@ -15,6 +15,7 @@
             <class name="contextMenu.ContextMenuTest"/>
             <class name="digestAuthentication.DigestAuthenticationTest"/>
             <class name="disappearingElements.DisappearingElementTest"/>
+            <class name="dragAndDrop.DragAndDropTest"/>
         </classes>
     </test>
 
@@ -29,6 +30,7 @@
             <class name="contextMenu.ContextMenuTest"/>
             <class name="digestAuthentication.DigestAuthenticationTest"/>
             <class name="disappearingElements.DisappearingElementTest"/>
+            <class name="dragAndDrop.DragAndDropTest"/>
         </classes>
     </test>
 
@@ -44,6 +46,7 @@
             <class name="contextMenu.ContextMenuTest"/>
             <class name="digestAuthentication.DigestAuthenticationTest"/>
             <class name="disappearingElements.DisappearingElementTest"/>
+            <class name="dragAndDrop.DragAndDropTest"/>
         </classes>
     </test>
 

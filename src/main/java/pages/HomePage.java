@@ -15,6 +15,7 @@ public class HomePage {
     private static final String CHECK_BOX_LINK = "a[href*='checkboxes']";
     private static final String CONTEXT_MENU_LINK = "a[href*='context']";
     private static final String DISAPPEARING_ELEMENTS_LINK = "a[href*='disappear']";
+    private static final String DRAG_DROP_LINK = "a[href*='drag']";
     private final WebDriver driver;
     private final WebDriverWait wait;
 
@@ -66,6 +67,11 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(DISAPPEARING_ELEMENTS_LINK))).click();
         return new DisappearingElementPage(driver);
 
+    }
+
+    public DragAndDropPage clickDragAndDropLink() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(DRAG_DROP_LINK))).click();
+        return new DragAndDropPage(driver);
     }
 
 
